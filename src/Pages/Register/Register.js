@@ -6,13 +6,14 @@ import { AuthContext } from '../Context/UserContext';
 const provider = new GoogleAuthProvider();
 
 const Register = () => {
-    const { googleSignIn, createUser } = useContext(AuthContext)
+    const { googleSignIn, createUser, updateUserProfile } = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
     const handleRegister = e => {
         e.preventDefault();
         const form = e.target;
+        const url = `https://img.icons8.com/ios-glyphs/30/null/user--v1.png`
         const account = form.account.value;
         const name = form.name.value;
         const email = form.email.value;
@@ -23,10 +24,20 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                handleUpdateUserProfile(name, url)
                 navigate(from, { replace: true })
                 form.reset();
             })
             .catch(err => console.error(err))
+    }
+    const handleUpdateUserProfile = (name, url) => {
+        const profile = {
+            displayName: name,
+            photoURL: url
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => console.error(error))
     }
     const handleGoogle = () => {
         googleSignIn(provider)
