@@ -5,6 +5,7 @@ import AddProduct from "../AddProduct/AddProduct";
 import Blog from "../Blog/Blog";
 import Home from "../Home/Home/Home";
 import Login from "../Login/Login";
+import MyOrders from "../MyOrders/MyOrders";
 import Myproducts from "../MyProducts/Myproducts";
 import Register from "../Register/Register";
 import SingleCategory from "../SingleCategory/SingleCategory";
@@ -42,8 +43,11 @@ const router = createBrowserRouter([
             {
                 path: '/myproducts',
                 element: <Myproducts></Myproducts>,
-
             },
+            {
+                path: '/myorders',
+                element: <MyOrders></MyOrders>
+            }
         ])
     },
     {
