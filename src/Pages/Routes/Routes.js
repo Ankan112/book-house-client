@@ -5,6 +5,7 @@ import AddProduct from "../AddProduct/AddProduct";
 import Blog from "../Blog/Blog";
 import Home from "../Home/Home/Home";
 import Login from "../Login/Login";
+import Myproducts from "../MyProducts/Myproducts";
 import Register from "../Register/Register";
 import SingleCategory from "../SingleCategory/SingleCategory";
 
@@ -37,7 +38,12 @@ const router = createBrowserRouter([
                 path: '/category/:name',
                 element: <SingleCategory></SingleCategory>,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.name}`)
-            }
+            },
+            {
+                path: '/myproducts',
+                element: <Myproducts></Myproducts>,
+
+            },
         ])
     },
     {
