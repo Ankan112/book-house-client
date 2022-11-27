@@ -9,6 +9,7 @@ import Home from "../Home/Home/Home";
 import Login from "../Login/Login";
 import MyOrders from "../MyOrders/MyOrders";
 import Myproducts from "../MyProducts/Myproducts";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Register from "../Register/Register";
 import SingleCategory from "../SingleCategory/SingleCategory";
 
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/category/:name',
-                element: <SingleCategory></SingleCategory>,
+                element: <PrivateRoute><SingleCategory></SingleCategory></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.name}`)
             },
             {
@@ -57,6 +58,9 @@ const router = createBrowserRouter([
             {
                 path: '/allbuyer',
                 element: <AllBuyer></AllBuyer>
+            },
+            {
+
             }
         ])
     },
