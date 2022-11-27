@@ -31,7 +31,7 @@ const BookModal = ({ modalData }) => {
                 if (data.insertedId) {
                     toast.success('Order Booked Successfully')
                 }
-                navigate('/myorders')
+                navigate('/dashboard/myorders')
             })
     }
     return (

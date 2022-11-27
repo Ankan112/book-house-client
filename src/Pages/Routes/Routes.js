@@ -13,6 +13,7 @@ import Home from "../Home/Home/Home";
 import Login from "../Login/Login";
 import MyOrders from "../MyOrders/MyOrders";
 import Myproducts from "../MyProducts/Myproducts";
+import Payment from "../Payment/Payment";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Register from "../Register/Register";
 import SellerRoute from "../SellerRoute/SellerRoute";
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
                 path: '/dashboard/allbuyer',
                 element: <AdminRoute><AllBuyer></AllBuyer></AdminRoute>
             },
+            {
+                path: '/dashboard/myorders/payment',
+                element: <BuyerRoute><Payment></Payment></BuyerRoute>
+            }
         ])
     },
     {
