@@ -29,9 +29,6 @@ const Navigation = () => {
                         <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/products">Add Porduct</NavLink>
-                    </li>
-                    <li>
                         <NavLink to="/blog">Blog</NavLink>
                     </li>
                     {
@@ -57,27 +54,9 @@ const Navigation = () => {
             <div className="social-media">
                 <ul className="social-media-desktop">
                     <li>
-                        {/* <a
-                            href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                            target="_thapa">
-                            <FaFacebookSquare className="facebook" />
-                        </a> */}
+
                         <span >Dark </span>
                     </li>
-                    {/* <li>
-                        <a
-                            href="https://www.instagram.com/thapatechnical/"
-                            target="_thapa">
-                            <FaInstagramSquare className="instagram" />
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                            target="_thapa">
-                            <FaYoutubeSquare className="youtube" />
-                        </a>
-                    </li> */}
                 </ul>
 
                 {/* hamburget menu start  */}

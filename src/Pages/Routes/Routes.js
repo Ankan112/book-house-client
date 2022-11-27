@@ -7,6 +7,7 @@ import AdminRoute from "../AdminRoute/AdminRoute";
 import AllBuyer from "../AllBuyer/AllBuyer";
 import AllSeller from "../AllSeller/AllSeller";
 import Blog from "../Blog/Blog";
+import BuyerRoute from "../BuyerRoute/BuyerRoute";
 import Dashboard from "../Dashboard/Dashboard";
 import Home from "../Home/Home/Home";
 import Login from "../Login/Login";
@@ -44,22 +45,6 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.name}`)
             },
             {
-                path: '/myproducts',
-                element: <Myproducts></Myproducts>,
-            },
-            {
-                path: '/myorders',
-                element: <MyOrders></MyOrders>
-            },
-            {
-                path: '/allseller',
-                element: <AllSeller></AllSeller>
-            },
-            {
-                path: '/allbuyer',
-                element: <AllBuyer></AllBuyer>
-            },
-            {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>
             }
@@ -79,7 +64,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/myorders',
-                element: <MyOrders></MyOrders>
+                element: <BuyerRoute><MyOrders></MyOrders></BuyerRoute>
             },
             {
                 path: '/dashboard/allseller',
