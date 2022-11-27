@@ -8,6 +8,7 @@ import { AuthContext } from '../../Pages/Context/UserContext';
 const Navigation = () => {
     const { user, logOut } = useContext(AuthContext)
     const [showMediaIcons, setShowMediaIcons] = useState(false);
+
     return (
 
         <nav className="main-nav">
@@ -35,9 +36,14 @@ const Navigation = () => {
                     </li>
                     {
                         user && user.uid ?
-                            <li>
-                                <NavLink><button onClick={logOut}>Logout</button></NavLink>
-                            </li>
+                            <>
+                                <li>
+                                    <NavLink to="/dashboard">Dashboard</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink><button onClick={logOut}>Logout</button></NavLink>
+                                </li>
+                            </>
                             :
                             <li>
                                 <NavLink to="/login">Login</NavLink>

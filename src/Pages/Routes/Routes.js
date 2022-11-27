@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashboardMain from "../../Layout/DashboardMain";
 import Main from "../../Layout/Main";
 import NotFound from "../../Shared/NotFound/NotFound";
 import AddProduct from "../AddProduct/AddProduct";
 import AllBuyer from "../AllBuyer/AllBuyer";
 import AllSeller from "../AllSeller/AllSeller";
 import Blog from "../Blog/Blog";
+import Dashboard from "../Dashboard/Dashboard";
 import Home from "../Home/Home/Home";
 import Login from "../Login/Login";
 import MyOrders from "../MyOrders/MyOrders";
@@ -35,10 +37,6 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: '/products',
-                element: <AddProduct></AddProduct>
-            },
-            {
                 path: '/category/:name',
                 element: <PrivateRoute><SingleCategory></SingleCategory></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.name}`)
@@ -60,8 +58,35 @@ const router = createBrowserRouter([
                 element: <AllBuyer></AllBuyer>
             },
             {
-
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
             }
+        ])
+    },
+    {
+        path: '/dashboard',
+        element: <DashboardMain></DashboardMain>,
+        children: ([
+            {
+                path: '/dashboard/products',
+                element: <AddProduct></AddProduct>
+            },
+            {
+                path: '/dashboard/myproducts',
+                element: <Myproducts></Myproducts>
+            },
+            {
+                path: '/dashboard/myorders',
+                element: <MyOrders></MyOrders>
+            },
+            {
+                path: '/dashboard/allseller',
+                element: <AllSeller></AllSeller>
+            },
+            {
+                path: '/dashboard/allbuyer',
+                element: <AllBuyer></AllBuyer>
+            },
         ])
     },
     {

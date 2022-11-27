@@ -39,109 +39,111 @@ const AddProduct = () => {
             })
     }
     return (
-        <section class="w-full max-w-2xl my-8 px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
-            <h2 class="text-3xl font-semibold text-center text-gray-800 dark:text-white">Add New Product</h2>
-            <form class="mt-6 " onSubmit={handleProduct}>
-                <div class="items-center -mx-2 md:flex">
-                    <div class="w-full mx-2">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Name</label>
+        <>
+            <section class="w-full max-w-2xl my-8 px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+                <h2 class="text-3xl font-semibold text-center text-gray-800 dark:text-white">Add New Product</h2>
+                <form class="mt-6 " onSubmit={handleProduct}>
+                    <div class="items-center -mx-2 md:flex">
+                        <div class="w-full mx-2">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Name</label>
 
-                        <input name='name' defaultValue={user?.displayName} class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                            <input name='name' defaultValue={user?.displayName} class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                        </div>
+
+                        <div class="w-full mx-2 mt-4 md:mt-0">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">E-mail</label>
+
+                            <input name='email' defaultValue={user?.email} class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="email" />
+                        </div>
+                    </div>
+                    <div class="items-center -mx-2 md:flex">
+                        <div class="w-full mx-2">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Product Name</label>
+
+                            <input name='productName' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                        </div>
+
+                        <div class="w-full mx-2 mt-4 md:mt-0">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Phone</label>
+
+                            <input name='phone' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="number" />
+                        </div>
+                    </div>
+                    <div class="items-center -mx-2 md:flex">
+                        <div class="w-full mx-2">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Original Price</label>
+
+                            <input name='orginalPrice' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="number" />
+                        </div>
+
+                        <div class="w-full mx-2 mt-4 md:mt-0">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Resale Price</label>
+
+                            <input name='resalePrice' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="number" />
+                        </div>
+                    </div>
+                    <div class="items-center -mx-2 md:flex">
+                        <div class="w-full mx-2">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Product URL</label>
+
+                            <input name='productURL' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                        </div>
+
+                        <div class="w-full mx-2 mt-4 md:mt-0">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Time</label>
+
+                            <input name='time' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                        </div>
+                    </div>
+                    <div class="items-center -mx-2 md:flex">
+                        <div class="w-full mx-2">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Location</label>
+
+                            <input name='location' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                        </div>
+
+                        <div class="w-full mx-2 mt-4 md:mt-0">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Years of Use</label>
+
+                            <input name='yearOfUse' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                        </div>
                     </div>
 
-                    <div class="w-full mx-2 mt-4 md:mt-0">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">E-mail</label>
+                    <div class="items-center -mx-2 md:flex">
+                        <div class="w-full mx-2">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Condition Type</label>
 
-                        <input name='email' defaultValue={user?.email} class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="email" />
-                    </div>
-                </div>
-                <div class="items-center -mx-2 md:flex">
-                    <div class="w-full mx-2">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Product Name</label>
+                            <select name='type' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" >
+                                <option value="Excellent">Excellent</option>
+                                <option value="Good">Good</option>
+                                <option value="Fair">Fair</option>
+                            </select>
+                        </div>
 
-                        <input name='productName' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
-                    </div>
+                        <div class="w-full mx-2 mt-4 md:mt-0">
+                            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Category</label>
 
-                    <div class="w-full mx-2 mt-4 md:mt-0">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Phone</label>
-
-                        <input name='phone' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="number" />
-                    </div>
-                </div>
-                <div class="items-center -mx-2 md:flex">
-                    <div class="w-full mx-2">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Original Price</label>
-
-                        <input name='orginalPrice' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="number" />
+                            <select name='category' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" >
+                                <option value="Historical">Historical</option>
+                                <option value="Sciencefiction">Science Fiction</option>
+                                <option value="Novel">Novel</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <div class="w-full mx-2 mt-4 md:mt-0">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Resale Price</label>
+                    <div class="w-full mt-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Description</label>
 
-                        <input name='resalePrice' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="number" />
-                    </div>
-                </div>
-                <div class="items-center -mx-2 md:flex">
-                    <div class="w-full mx-2">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Product URL</label>
-
-                        <input name='productURL' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                        <textarea name='description' class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
                     </div>
 
-                    <div class="w-full mx-2 mt-4 md:mt-0">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Time</label>
-
-                        <input name='time' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
+                    <div class="flex justify-center mt-6">
+                        <button type='submit' class="px-4 py-2 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Add Product
+                        </button>
                     </div>
-                </div>
-                <div class="items-center -mx-2 md:flex">
-                    <div class="w-full mx-2">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Location</label>
-
-                        <input name='location' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
-                    </div>
-
-                    <div class="w-full mx-2 mt-4 md:mt-0">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Years of Use</label>
-
-                        <input name='yearOfUse' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" />
-                    </div>
-                </div>
-
-                <div class="items-center -mx-2 md:flex">
-                    <div class="w-full mx-2">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Condition Type</label>
-
-                        <select name='type' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" >
-                            <option value="Excellent">Excellent</option>
-                            <option value="Good">Good</option>
-                            <option value="Fair">Fair</option>
-                        </select>
-                    </div>
-
-                    <div class="w-full mx-2 mt-4 md:mt-0">
-                        <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Category</label>
-
-                        <select name='category' class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" >
-                            <option value="Historical">Historical</option>
-                            <option value="Sciencefiction">Science Fiction</option>
-                            <option value="Novel">Novel</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="w-full mt-4">
-                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Description</label>
-
-                    <textarea name='description' class="block w-full h-40 px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"></textarea>
-                </div>
-
-                <div class="flex justify-center mt-6">
-                    <button type='submit' class="px-4 py-2 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Add Product
-                    </button>
-                </div>
-            </form>
-        </section>
+                </form>
+            </section>
+        </>
     );
 };
 
