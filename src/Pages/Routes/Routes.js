@@ -3,6 +3,7 @@ import DashboardMain from "../../Layout/DashboardMain";
 import Main from "../../Layout/Main";
 import NotFound from "../../Shared/NotFound/NotFound";
 import AddProduct from "../AddProduct/AddProduct";
+import AdminRoute from "../AdminRoute/AdminRoute";
 import AllBuyer from "../AllBuyer/AllBuyer";
 import AllSeller from "../AllSeller/AllSeller";
 import Blog from "../Blog/Blog";
@@ -81,11 +82,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/allseller',
-                element: <AllSeller></AllSeller>
+                element: <AdminRoute><AllSeller></AllSeller></AdminRoute>
             },
             {
                 path: '/dashboard/allbuyer',
-                element: <AllBuyer></AllBuyer>
+                element: <AdminRoute><AllBuyer></AllBuyer></AdminRoute>
             },
         ])
     },
