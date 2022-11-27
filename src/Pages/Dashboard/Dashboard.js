@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import useAdmin from '../../Hooks/useAdmin';
+import { AuthContext } from '../Context/UserContext';
 
 const Dashboard = () => {
+    const { user } = useContext(AuthContext)
+    const [isAdmin] = useAdmin(user?.email)
     return (
         <div className="drawer">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -20,8 +24,12 @@ const Dashboard = () => {
                             <li><Link to='/dashboard/products'>Add New Product</Link></li>
                             <li><Link to='/dashboard/myproducts'>My Products</Link></li>
                             <li><Link to='/dashboard/myorders'>My Orders</Link></li>
-                            <li><Link to='/dashboard/allseller'>All Seller</Link></li>
-                            <li><Link to='/dashboard/allbuyer'>My Buyer</Link></li>
+                            {
+                                isAdmin && <>
+                                    <li><Link to='/dashboard/allseller'>All Seller</Link></li>
+                                    <li><Link to='/dashboard/allbuyer'>My Buyer</Link></li>
+                                </>
+                            }
                         </ul>
                     </div>
                 </div>
@@ -35,9 +43,13 @@ const Dashboard = () => {
                     <li><Link to='/dashboard/products'>Add New Product</Link></li>
                     <li><Link to='/dashboard/myproducts'>My Products</Link></li>
                     <li><Link to='/dashboard/myorders'>My Orders</Link></li>
-                    <li><Link to='/dashboard/allseller'>All Seller</Link></li>
-                    <li><Link to='/dashboard/allbuyer'>My Buyer</Link></li>
 
+                    {
+                        isAdmin && <>
+                            <li><Link to='/dashboard/allseller'>All Seller</Link></li>
+                            <li><Link to='/dashboard/allbuyer'>My Buyer</Link></li>
+                        </>
+                    }
                 </ul>
 
             </div>
