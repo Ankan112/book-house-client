@@ -14,6 +14,7 @@ import MyOrders from "../MyOrders/MyOrders";
 import Myproducts from "../MyProducts/Myproducts";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Register from "../Register/Register";
+import SellerRoute from "../SellerRoute/SellerRoute";
 import SingleCategory from "../SingleCategory/SingleCategory";
 
 const router = createBrowserRouter([
@@ -70,11 +71,11 @@ const router = createBrowserRouter([
         children: ([
             {
                 path: '/dashboard/products',
-                element: <AddProduct></AddProduct>
+                element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
             },
             {
                 path: '/dashboard/myproducts',
-                element: <Myproducts></Myproducts>
+                element: <SellerRoute><Myproducts></Myproducts></SellerRoute>
             },
             {
                 path: '/dashboard/myorders',

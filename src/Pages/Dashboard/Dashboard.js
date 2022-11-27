@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import useAdmin from '../../Hooks/useAdmin';
+import useSeller from '../../Hooks/useSeller';
 import { AuthContext } from '../Context/UserContext';
 
 const Dashboard = () => {
     const { user } = useContext(AuthContext)
     const [isAdmin] = useAdmin(user?.email)
+    const [isSeller] = useSeller(user?.email)
     return (
         <div className="drawer">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -21,8 +23,13 @@ const Dashboard = () => {
                     <div className="flex-none hidden lg:block">
                         <ul className="menu menu-horizontal">
                             {/* Navbar menu content here  */}
-                            <li><Link to='/dashboard/products'>Add New Product</Link></li>
-                            <li><Link to='/dashboard/myproducts'>My Products</Link></li>
+                            {
+                                isSeller && <>
+                                    <li><Link to='/dashboard/products'>Add New Product</Link></li>
+                                    <li><Link to='/dashboard/myproducts'>My Products</Link></li>
+                                </>
+                            }
+
                             <li><Link to='/dashboard/myorders'>My Orders</Link></li>
                             {
                                 isAdmin && <>
