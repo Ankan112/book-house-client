@@ -53,10 +53,10 @@ const Navigation = () => {
             {/* 3rd social media links */}
             <div className="social-media">
                 <ul className="social-media-desktop">
-                    <li>
+                    {/* <li>
 
                         <span >Dark </span>
-                    </li>
+                    </li> */}
                 </ul>
 
                 {/* hamburget menu start  */}
