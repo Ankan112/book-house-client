@@ -21,7 +21,7 @@ const Register = () => {
         const password = form.password.value;
         const user = { account, name, email }
         // console.log(account, name, email, password, user)
-        fetch('http://localhost:5000/users', {
+        fetch('https://assignment-12-server-delta.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

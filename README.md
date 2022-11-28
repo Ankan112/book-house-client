@@ -1,8 +1,8 @@
 # Book House
 
-[Live site](https://github.com/facebook/create-react-app).\
-[Client site](https://github.com/facebook/create-react-app).\
-[Server site](https://github.com/facebook/create-react-app).\
+[Live site](https://book-house-bd.web.app/)\
+[Client site](https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-Ankan112)\
+[Server site](https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-Ankan112)
 
 ## Features
 

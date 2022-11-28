@@ -24,7 +24,7 @@ const AddProduct = () => {
         const description = form.description.value;
         const product = { name, email, productName, phone, orginalPrice, resalePrice, productURL, time, location, yearOfUse, type, category, description }
         console.log(product)
-        fetch('http://localhost:5000/products', {
+        fetch('https://assignment-12-server-delta.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

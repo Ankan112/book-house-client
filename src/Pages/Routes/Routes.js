@@ -43,7 +43,7 @@ const router = createBrowserRouter([
             {
                 path: '/category/:name',
                 element: <PrivateRoute><SingleCategory></SingleCategory></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.name}`)
+                loader: ({ params }) => fetch(`https://assignment-12-server-delta.vercel.app/products/${params.name}`)
             },
             {
                 path: '/dashboard',

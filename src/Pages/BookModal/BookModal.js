@@ -18,7 +18,7 @@ const BookModal = ({ modalData }) => {
         const phone = form.phone.value;
         const order = { name, email, productName, price, location, phone }
         // console.log(order)
-        fetch('http://localhost:5000/orders', {
+        fetch('https://assignment-12-server-delta.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

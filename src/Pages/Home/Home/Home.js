@@ -7,7 +7,7 @@ import Review from '../Review/Review';
 const Home = () => {
     const [advertiseProduct, setAdvertiseProduct] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/advertise`)
+        fetch(`https://assignment-12-server-delta.vercel.app/advertise`)
             .then(res => res.json())
             .then(data => setAdvertiseProduct(data))
     }, [])

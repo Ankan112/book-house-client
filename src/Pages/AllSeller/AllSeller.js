@@ -4,14 +4,14 @@ import toast from 'react-hot-toast';
 const AllSeller = () => {
     const [sellerData, setSellerData] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/users?account=seller`)
+        fetch(`https://assignment-12-server-delta.vercel.app/users?account=seller`)
             .then(res => res.json())
             .then(data => setSellerData(data))
     }, [])
     const handleDelete = id => {
         const agree = window.confirm('Are you sure you want to delete this account?')
         if (agree) {
-            fetch(`http://localhost:5000/users/seller/${id}`, {
+            fetch(`https://assignment-12-server-delta.vercel.app/users/seller/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

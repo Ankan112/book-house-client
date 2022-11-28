@@ -6,7 +6,7 @@ const Myproducts = () => {
     const [products, setProducts] = useState([])
     const { user } = useContext(AuthContext)
     useEffect(() => {
-        fetch(`http://localhost:5000/myproducts?email=${user?.email}`)
+        fetch(`https://assignment-12-server-delta.vercel.app/myproducts?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -15,7 +15,7 @@ const Myproducts = () => {
     const handleDelete = id => {
         const agree = window.confirm('Are you sure you want to delete this product?')
         if (agree) {
-            fetch(`http://localhost:5000/products/${id}`, {
+            fetch(`https://assignment-12-server-delta.vercel.app/products/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -28,7 +28,7 @@ const Myproducts = () => {
         }
     }
     const handleAdvertise = product => {
-        fetch(`http://localhost:5000/advertise/${product._id}`, {
+        fetch(`https://assignment-12-server-delta.vercel.app/advertise/${product._id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
